@@ -1,0 +1,77 @@
+.addEventFormClass{
+    padding: 5%;
+    background-color: rgb(35, 43, 83);
+    overflow-y: auto;
+}
+
+.validationInput123{
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+#noticeEvent{
+    background-color: rgba(177, 174, 0, 0.384);
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.currentLocationBtn{
+    font-size: 18px;
+    align-items: flex-end;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    border: hidden;
+    color: rgb(75, 75, 75);
+    float: right;
+    background-color: rgb(167, 180, 255);
+}
+.currentLocationBtn svg{
+    width: inherit;
+    height: inherit;
+    filter: invert(25%);
+}
+
+.currentLocationBtn svg:hover{
+    filter: invert(100%);
+}
+
+.currentLocationBtn:hover{
+    background-color: rgb(79, 79, 124);
+}
+
+.choiceBtns{
+    display: flex;
+    justify-content: space-around;
+}
+.choiceBtns button{
+    font-size: 14px;
+    font-weight: 600;
+    height: 35px;
+    width: 10em;
+    border-radius: 5px;
+    border: hidden;
+    color: rgb(75, 75, 75);
+    background-color: rgb(167, 180, 255);
+}
+
+.choiceBtns button:hover{
+    color: blanchedalmond;
+    background-color: rgb(79, 79, 124);
+}
+
+.choiceBtns #btnActive1{
+    background-color: rgb(1, 6, 53);
+    box-shadow: 0 0 3px rgb(49, 49, 49);
+    color: blanchedalmond;
+}
+.choiceBtns #btnActive2{
+    background-color: rgb(1, 6, 53);
+    box-shadow: 0 0 3px rgb(49, 49, 49);
+    color: blanchedalmond;
+
+}

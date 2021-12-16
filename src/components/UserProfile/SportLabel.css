@@ -1,0 +1,298 @@
+  .main-wrapper {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .main-wrapper:hover{
+    background-color: rgba(63, 63, 63, 0.61);
+  }
+
+  .badge {
+    position: relative;
+    margin: 1.2em 0.5em;
+    width: 4em;
+    height: 6.5em;
+    border-radius: 10px;
+    display: inline-block;
+    top: 0;
+    transition: all 0.2s ease;
+  }
+  .badge:before, .badge:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .badge:before {
+    transform: rotate(60deg);
+  }
+  .badge:after {
+    transform: rotate(-60deg);
+  }
+ 
+  .badge .circle {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .badge .circle i.fa {
+    font-size: 2.2em;
+    margin-top: 7px;
+  }
+
+  .badge .font {
+    display: inline-block;
+    margin-top: 1em;
+  }
+  .badge .ribbon {
+    position: absolute;
+    border-radius: 5px;
+    padding: 5px 5px 4px;
+    width: 90px;
+    z-index: 11;
+    color: #fff;
+    bottom: 8px;
+    left: 58%;
+    margin-left: -50px;
+    height: 17px;
+    font-size: 13px;
+    box-shadow: 0 4px 4px rgb(0, 0, 0);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #555 0%, #333 100%);
+    cursor: default;
+  }
+
+  .yellow {
+    background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+    color: black;
+  }
+  .yellow img{
+    margin-top: 5px;
+  }
+  
+  .yellow.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .yellow.disabled img{
+    margin-top: 5px;
+  }
+
+
+  .orange {
+    background: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+    color: black;
+  }
+  .orange img{
+    margin-top: 5px;
+    width: 26px;
+    transform: rotate(-30deg);
+  }
+  .orange.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+
+  .pink {
+    background: linear-gradient(to bottom right, #f48fb1 0%, #d81b60 100%);
+    color: black;
+  }
+  .pink svg{
+    font-size: 24px;
+    margin-top: 7px;
+  }
+  .pink.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .red {
+    background: linear-gradient(to bottom right, #f4511e 0%, #b71c1c 100%);
+    color: black;
+  }
+  .red svg{
+    font-size: 22px;
+    margin-top: 9px;
+  }
+  .red.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .purple {
+    background: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
+    color: black;
+  }
+  .purple img{
+    margin-top: 5px;
+  }
+  .purple.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .teal {
+    background: linear-gradient(to bottom right, #4db6ac 0%, #00796b 100%);
+    color: black;
+  }
+  .teal img{
+    margin-top: 5px;
+  }
+  .teal.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .blue {
+    background: linear-gradient(to bottom right, #4fc3f7 0%, #2196f3 100%);
+    color: black;
+  }
+  .blue img{
+    margin-top: 5px;
+  }
+  .blue.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .blue-dark {
+    background: linear-gradient(to bottom right, #1976d2 0%, #283593 100%);
+    color: black;
+  }
+  .blue-dark.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .green {
+    background: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
+    color: black;
+  }
+  .green img{
+    margin-top: 7px;
+  }
+  .green.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .green-dark {
+    background: linear-gradient(to bottom right, #4caf50 0%, #1b5e20 100%);
+    color: black;
+  }
+  .green-dark svg{
+    font-size: 26px;
+    margin-top: 7px;
+  }
+  .green-dark.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .dark-turquoise {
+    background: linear-gradient(to bottom right, #378388 0%, #182425 100%);
+    color: #000000;
+  }
+  .dark-turquoise svg{
+    margin-top: 9px;
+    font-size: 24px;
+  }
+  .dark-turquoise.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .gold {
+    background: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
+    color: black;
+  }
+  .gold svg{
+    font-size: 24px;
+    margin-top: 7px;
+  }
+  .gold.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .blue-dark {
+    background: linear-gradient(to bottom right, #1976d2 0%, #283593 100%);
+    color: black;
+  }
+  .blue-dark img{
+    margin-top: 5px;
+  }
+  .blue-dark.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .dark {
+    background: linear-gradient(to bottom right, #00356d 0%, #011242 100%);
+    color: black;
+  }
+  .dark svg{
+    font-size: 26px;
+    margin-top: 7px;
+  }
+  .dark.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .red-dark {
+    background: linear-gradient(to bottom right, #a52020 0%, #7a1919 100%);
+    color: black; 
+  }
+  .red-dark svg{
+      font-size: 26px;
+      margin-top: 7px;
+  }
+
+  .red-dark.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+
+  .purple-dark{
+    background: linear-gradient(to bottom right, #4d1e74 0%, #440c52 100%);
+    color: black;
+  }
+  .purple-dark svg{
+    font-size: 26px;
+    margin-top: 7px;
+  }
+  .purple-dark.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  .pink-dark{
+    background: linear-gradient(to bottom right, #7e0660 0%, #5c0000 100%);
+    color: black; 
+  }
+  .pink-dark.disabled {
+    background: linear-gradient(to bottom right, #858585 0%, #535353 100%);
+    color: rgb(85, 85, 85);
+    opacity: 0.5;
+  }
+  

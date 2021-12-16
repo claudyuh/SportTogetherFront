@@ -1,0 +1,117 @@
+#navbar {
+    background-color: rgba(0, 0, 0, 0.719);
+    backdrop-filter: blur(2px);
+    font-size: large;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar .container a{
+    color: rgb(255, 255, 255);
+}
+
+.navbar-brand{
+  font-size: 22px;
+  color: white !important;
+  margin-right: 22px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#navbar .container a:hover{
+    color: rgb(255, 249, 167);
+}
+
+.navbar-brand svg{
+  background-color: rgb(255, 255, 255) ;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    /* left: 0; */
+    margin-top: 0.125rem;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+  }
+  
+  
+  .specialTreatmentLink{
+  font-weight: 700 !important;
+}
+
+.specialTreatmentLink:hover{
+    background-color: rgb(78, 78, 78);
+    color: white !important;
+}
+
+.badge1 {
+    position: relative;
+    margin-top: -8px;
+    float: right;
+    width: 2em;
+    height: 3em;
+    border-radius: 10px;
+    top: 0;
+  }
+  .badge1:before, .badge1:after {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: inherit;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .badge1:before {
+    transform: rotate(60deg);
+  }
+  .badge1:after {
+    transform: rotate(-60deg);
+  }
+  
+  .badge1 .circle {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    z-index: 10;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .badge1 .font {
+    display: inline-block;
+    margin-top: 1em;
+  }
+  
+  .custom{
+    background: linear-gradient(to bottom right, #ffffff 0%, rgb(0, 0, 0) 100%);
+    color: black;
+  }
+  .custom svg{
+    font-size: 30px;
+  }
+
+
+  @media (max-width:990px) {
+    .badge1{
+      float: left;
+      margin-left: auto;
+    }
+  }
+  @media (min-width:1100px) {
+    .dropdown-menu[data-bs-popper]{
+        margin-right: 45px;
+    }
+  }

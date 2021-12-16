@@ -1,0 +1,90 @@
+.loginContainer {
+    margin-top:35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:500px;
+    width: 100%;
+}
+
+.box{
+    margin-right: 200px;
+    height: 20rem;
+    justify-content: start;
+}
+.box label{
+    color: rgb(255, 241, 161);
+    font-weight: 700;
+}
+
+.login__button{
+    color: blanchedalmond;
+    background: rgb(39, 39, 39);
+    border:transparent;
+}
+.login__button:hover{
+    color: blanchedalmond;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.445);
+}
+
+.box input {
+    color: rgb(255, 241, 161);
+
+}
+.box h3 {
+    color: rgb(255, 229, 82);
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.loginForm{
+    background-color: rgba(39, 39, 39, 0.829);
+    backdrop-filter: blur(5px);
+    padding: 10%;
+    border-radius: 7px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.795);
+}
+
+#formBasicEmail, #formBasicPassword{
+    color: black;
+}
+
+@media (max-width:900px) {
+    .loginContainer {
+        margin-top: 25px;
+        margin-left: 5%;
+        height:500px;
+        width: 70%;
+    }
+    .box{
+        min-width: 300px;
+        height: 20rem;    
+    }
+}
+
+@media (max-width: 1200px) {
+    .box{
+        margin-right: 0px;
+        margin-left: 100px;
+        width: 90%;
+        
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .box{
+        margin-right: 0px;
+        margin-left: 100px;
+        width: 70%;
+        
+    }
+}
+@media (max-width: 450px) {
+    .box{
+        margin-right: 0px;
+        margin-left: 15%;
+        width: 80%;
+    }
+}

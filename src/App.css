@@ -1,0 +1,38 @@
+html{
+    overflow-y: scroll;
+}
+
+body{
+  background-color: rgb(20, 20, 20)
+}
+
+.alert-class{
+  position:absolute;
+  top: 100px;
+  left: 10%;
+  right: 10%;
+  margin-right: 15%;
+  margin-left: 15%;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(83, 83, 83);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(199, 199, 199);
+  }

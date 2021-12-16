@@ -1,0 +1,82 @@
+.profile-header123{
+    width: 100%;
+    height: 100%;
+}
+
+.coverImg123{
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.coverImg123 img{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.coverImg123 .editCoverBtn{
+    position:absolute;
+    z-index: 100;
+    bottom: 10px;
+    right: 10px;
+}
+
+.user-image123{   
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 185px;
+    height: 185px;
+    margin-left: 60px;
+    bottom: -130px;
+   
+}
+
+.user-image123 .profileImg123{
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    border: 5px solid rgb(208, 213, 255);
+    object-fit: cover;
+}
+
+.user-image123 .after123 {
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    display: none;
+    color: #FFF;
+}
+.user-image123:hover .after123 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    background: rgba(0, 0, 0, .6);
+    cursor: pointer;
+}
+
+.user-image123:hover .after123 svg{
+    margin-left: 45%;
+}
+
+.show.dropdown #dropdownBtn, .dropdown #dropdownBtn{
+    position: absolute;
+    width: 185px;
+    height: 185px;
+    border-radius: 50% !important;
+    background-color: transparent;
+    border:unset;
+}
+.btn-check:focus+.btn, .btn:focus{
+    box-shadow: unset !important;
+}
+.btn-primary:active:focus{
+    box-shadow: unset !important;
+}

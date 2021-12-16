@@ -1,0 +1,80 @@
+.sectionUserDescription{
+    min-height: 300px;
+    color: white;
+}
+.name__ {
+    text-align: center;
+    margin-left: 22%;
+    margin-top: 35px;
+}
+.post-label{
+    margin-left: 300px;
+    margin-top: 15px;
+}
+.post-label :nth-child(2){
+    margin-left: 35px;   
+}
+
+.job__title{
+    margin-top: 45px;
+}
+.city__label{
+    margin-left: 20px;
+    font-size: 18px;
+
+}
+
+.bio-box{
+    padding-left:55px;
+    padding-right: 55px;
+}
+
+
+.footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-right: 30%;
+}
+.footer, .footer strong{
+text-align: center;
+}
+.footer p{
+margin-bottom: 0px;
+}
+.footer-box-main{
+width: 50%;
+margin-left: 100px;
+}
+.footer img{
+   height: 45px;
+   width: 45px;
+   float: inline-end;
+}
+.footer-box{
+height: 50px;
+width: 50px;
+border: 1px solid #939393;
+border-radius: 50%;
+float: right;
+margin-left: 25px;
+}
+
+.footer-box i{
+line-height: 50px;
+font-size: 20px;
+}
+.footer-box .fa-facebook{
+color: #365597;
+}
+.footer-box .fa-twitter{
+color: #01B0F4;
+}
+.footer-box .fa-linkedin{
+color: #0F80BB;
+}
+.footer-box .fa-tiktok{
+color: #D53B1F;
+}
+.footer-box .fa-instagram{
+color: #CF3594;
+}

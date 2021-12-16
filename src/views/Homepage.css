@@ -1,0 +1,123 @@
+#homepageImg {
+  position: absolute;
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 1000px) {
+  #homapageImg {
+    position: absolute;
+    object-fit: cover;
+  }
+}
+
+#welcomeBox {
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+}
+
+.container123 {
+  margin-bottom: 60px;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#box111 {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 7.5em;
+  font-weight: 900;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div h3 {
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.rent111 {
+  margin-top: 70px;
+}
+
+.sell111 {
+  margin-top: -70px;
+}
+
+.explore111 {
+  margin-top: -70px;
+  margin-bottom: -70px;
+}
+
+.rent112 {
+  margin-top: 70px;
+  background: linear-gradient(
+    to right,
+    rgb(0, 186, 219),
+    rgb(46, 2, 104),
+    rgb(0, 0, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.45s;
+}
+
+.sell112 {
+  margin-top: -70px;
+  background: linear-gradient(
+    to right,
+    rgb(51, 255, 0),
+    rgb(0, 140, 150),
+    rgb(0, 0, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.45s;
+}
+
+.explore112 {
+  margin-top: -70px;
+  margin-bottom: -70px;
+  background: linear-gradient(
+    to right,
+    rgb(255, 153, 1),
+    rgb(255, 251, 0),
+    rgb(0, 0, 0)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.45s;
+}
+
+.registerMessage {
+    margin-top: 30px;
+    line-height: 1.5;
+    text-align: center;
+    margin-left: 12%;
+    color: black;
+}
+
+#arrowUp {
+    position: absolute;
+    margin-left: 37%;
+    margin-top: 10px;
+    font-size: 55px;
+}
+
+@media (max-width: 500px) {
+    #box111 {
+        font-size: 5em;
+   
+    }
+    .registerMessage {
+        margin-left: 2%;
+    }
+}

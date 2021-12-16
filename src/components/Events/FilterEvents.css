@@ -1,0 +1,14 @@
+.filterSportsRadio{
+    margin-top: 2rem;  
+    color: white;  
+}
+
+.sportsContainer{
+    margin-bottom: 2rem;
+}
+
+.sportsContainer input{
+    background-color: transparent;
+    color: white;
+}
+

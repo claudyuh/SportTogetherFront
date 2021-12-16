@@ -1,0 +1,131 @@
+.mainColProfile{
+    margin-left: -5%;
+    width: 20rem;
+}
+
+.cardProfile{
+    width: inherit;
+    position: fixed;
+    margin-top: 2rem;
+    border-radius: 10px;
+    background-color: rgb(35, 43, 83);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+    color: rgb(225, 214, 255);
+
+}
+
+.profileCardList{
+    width: inherit;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 370px;
+    bottom:100px;
+}
+
+.profileCardList .list-group-item{
+    background-color: transparent;
+    color: white;
+    padding: 17px;
+    font-weight: 600;
+}
+
+.profileCardList .list-group-item:hover{
+    background-color: rgba(128, 128, 128, 0.363);
+}
+
+.accordion-item, 
+.accordion-header, 
+.accordion-button.collapsed,
+.accordion-button:not(.collapsed){
+    background-color: transparent;
+}
+
+.accordion-header h6{
+    color: white;
+}
+.accordion-button:not(.collapsed){
+    color:unset;
+}
+
+.accordion-header:hover{
+    background-color: rgba(128, 128, 128, 0.363);
+}
+
+#imageSettings{
+    margin-top: 2rem;
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+    margin-left: 25%;
+}
+#imageSettings img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: inherit;
+    border: 4px solid rgba(100, 85, 167);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.accordion-body img{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.littleCircle{
+    margin-top: 1%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: rgba(45, 62, 214, 0.719);
+    float: right;
+    padding-top: 1px;
+    margin-right: 10px;
+    color: white;
+    text-align: center;
+}
+
+#btnAcceptRefuse{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+}
+
+#btnAcceptRefuse img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    object-fit: cover;
+}
+
+#btnAcceptRefuse button{
+    border: hidden;
+    color: rgb(255, 255, 255);
+    background-color: rgba(128, 128, 128, 0.363);
+}
+#btnAcceptRefuse button:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgba(196, 196, 196, 0.363);
+}
+#btnAcceptRefuse button{
+    margin-left: 10px;
+}
+#btnAcceptRefuse span{
+    padding-top: 2px;
+    color: rgb(110, 147, 250);
+}
+
+.openMessageRequests:hover{
+    color: rgb(109, 68, 255);
+}
+
+.cardFont{
+    width: inherit;
+    padding-top: 5px;
+}
+
+

@@ -1,0 +1,25 @@
+.selectionStyle div{
+    text-align: center;
+    font-size: 20px;
+    padding:5px;
+}
+
+.selectionStyle{
+    background-color: rgb(7, 7, 7);
+}
+
+.selectionStyle div div:hover{
+    background-color: rgb(26, 26, 26);
+    cursor: pointer;
+}
+
+#selectedSport123{
+    margin-bottom: 20px;
+}
+
+.someSpanStyles{
+    background-color: rgb(36, 36, 36);
+    border-radius: 3px;
+    padding: 5px;
+}
+
