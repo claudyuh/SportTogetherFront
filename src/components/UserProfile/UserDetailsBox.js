@@ -1,7 +1,7 @@
 import React from "react";
 import "./UserDetailsBox.css";
 import { Col, Row } from "react-bootstrap";
-import TestComponent from "./TestComponent";
+import UserDescription from "./UserDescription";
 const UserDetailsBox = (props) => {
   return (
     <Col style={{border:'1px dashed white'}}  lg={7}>
@@ -13,7 +13,7 @@ const UserDetailsBox = (props) => {
           <Col>Cooking</Col>
         </Row>
 
-        <TestComponent county={props.userDetails.county}/>
+        <UserDescription county={props.userDetails.county}/>
 
         <div className="footer">
           <div className="footer-box">

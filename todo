@@ -1,8 +1,24 @@
+-BACK button, in case of an error does nothing, and attention at URLs
 
-TO DO TODAY:
 -EDIT Option
 
--FIX MODAL INPUTS NOT VISIBLE (CSS shit)
 -FIX OPTIONS OF BADGE ON EDIT (EX: Disable Option should appear only when the badge is assigned)
--ADD EVENT SHOW OPTIONS ONLY WITH ASSIGNED SPORTS.
+
 -DELETE EVENT FIX! DELETING EXACT ITEM FIX, MODAL RERENDERS AS MANY EVENTS THERE ARE !!!
+
+
+
+attention at fetching in events and profileCard, might be too many fetches, performance issue
+
+on button Join Event is refreshing the page, find alternative method, same for confirmation requests
+
+
+SportTogether Features to implement:
+-Autotmated request API weather data every 3H and updating all logged users weather data
+-Review System
+-ChatBox 
+-Dark/Light Theme
+
+
+-3 section color on events
+- color adjustment

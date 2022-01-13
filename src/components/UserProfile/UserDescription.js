@@ -1,7 +1,7 @@
 import React from "react";
-import './TestComponent.css'
+import './UserDescription.css'
 
-const TestComponent = (props) => {
+const UserDescription = (props) => {
 
     return (
       <div className="bio-box">
@@ -26,4 +26,4 @@ const TestComponent = (props) => {
     )
 }
 
-export default TestComponent
+export default UserDescription

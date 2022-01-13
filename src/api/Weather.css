@@ -1,0 +1,138 @@
+.cardWeather {
+  border: 3px solid black;
+  max-width: 350px;
+}
+
+.cityWeather{
+  font-size: 17px;
+}
+
+.col-8 {
+  border-top-left-radius: 0.5vh;
+  border-bottom-left-radius: 0.5vh;
+}
+
+.left {
+  background-color: rgb(243, 243, 243);
+  padding: 1rem;
+  margin: 0;
+}
+
+.right {
+  padding: 1rem;
+}
+
+.row,
+.col {
+  margin: 0;
+}
+
+.top {
+  text-align: center;
+  font-size: 0.65rem;
+  padding: 2vh;
+}
+
+
+  .top {
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 1vh;
+  }
+
+  .top .col {
+    padding: 0 0.5vh;
+  }
+
+
+.temp {
+  padding: 8vh;
+  text-align: center;
+  font-size: 18vh;
+  font-weight: bold;
+}
+
+  .temp {
+    padding: 3vh 0vh;
+    text-align: center;
+    font-size: 9vh;
+    font-weight: bold;
+  }
+
+
+  .temp {
+    padding: 3vh 0vh;
+    text-align: center;
+    font-size: 9vh;
+    font-weight: bold;
+  }
+
+
+.deg {
+  height: 50%;
+  background-color: rgb(189, 188, 188);
+  border-radius: 5rem;
+}
+
+.time {
+  align-self: center;
+  font-size: 0.8rem;
+}
+
+
+  .time {
+    align-self: center;
+    font-size: o.8rem;
+  }
+
+  .time h2 {
+    font-size: 0.9rem;
+  }
+
+  .col-5 {
+    padding: 1vh 0;
+  }
+
+
+.bottom .row {
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+
+.bottom .col {
+  padding: 1vh 0.1vw;
+  margin: 0.03rem;
+}
+
+
+.border123 {
+  border-radius: 2vh;
+}
+
+.right .top {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.timely .row {
+  justify-content: flex-end;
+  padding: 2vh;
+}
+
+.timely {
+  margin-top: 25%;
+}
+
+
+  .timely .row {
+    justify-content: flex-end;
+    padding: 2vh 0;
+    font-size: 0.52rem;
+  }
+
+
+  hr {
+    width: 0;
+    margin: 0;
+  }

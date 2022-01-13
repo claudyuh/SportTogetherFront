@@ -6,7 +6,6 @@ import { dialogActions } from "../../store/modal";
 function ModalAlert(props) {    
   const dispatch = useDispatch();
   const modalAlertShow = useSelector(state => state.dialog.modalAlertToggle)
-  console.log(modalAlertShow)
   const onHideFunction = () => {
     dispatch(dialogActions.modalAlertToggle())
   }

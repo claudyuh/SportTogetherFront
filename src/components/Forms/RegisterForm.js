@@ -34,14 +34,14 @@ const RegisterForm = () => {
   useSelector((state) => state.authentication.tokenExpiration)
   useSelector((state) => state.dialog.modalToggle)
 
-    useEffect(()=>{
-      let lstCounties = []
-      for (let i of countyList){
-        lstCounties.push({value: i, label: i})
-      }
-      console.log(lstCounties)
-      setListCounties(lstCounties)
-    },[])
+  useEffect(()=>{
+    let lstCounties = []
+    for (let i of countyList){
+      lstCounties.push({value: i, label: i})
+    }
+    console.log(lstCounties)
+    setListCounties(lstCounties)
+  },[])
 
   const btnClass1 = () => {
     setInputGender('male');
@@ -126,7 +126,7 @@ const RegisterForm = () => {
         <div className="registerForm">
         <LogoSvg id="registerFormSvg"/>
         <h3>Register</h3>
-        {isError && <p className="mb-5" id="noticeEvent"> {isError}</p>}
+        {isError && <p className="mt-5" id="noticeEvent1"> {isError}</p>}
         <Form onSubmit={registerFormHandler}>
             <Form.Text className="text-muted">
               We'll never share your data with anyone else.
@@ -198,7 +198,7 @@ const RegisterForm = () => {
                   value={inputCounty} 
                   placeholder={inputCounty} 
                   onChange={(option) => countyOptionChange(option)} 
-                  autoComplete="off"
+                  autocomplete="new-password"
                 />
                 {inputCity === "Select County..." && <div className='center mt-2 text-warning'> {cityValidation} </div>}
               </Form.Group>
@@ -212,7 +212,7 @@ const RegisterForm = () => {
                   placeholder={inputCity} 
                   value={inputCity} 
                   onChange={(opt) => cityOptionChange(opt)} 
-                  autoComplete="off"
+                  autocomplete="new-password"
                 />
               </Form.Group>
               {inputCity === "Select City..." && <div className='center mt-2 text-warning'> {cityValidation} </div>}

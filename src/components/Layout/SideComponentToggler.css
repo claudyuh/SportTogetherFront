@@ -1,0 +1,26 @@
+.sidebar {
+    background-color: #060b2600;
+    position: fixed;
+    top: 110px;
+    right: 80px;
+    cursor: pointer;
+  }
+  
+  .side-menu {
+    background-color: #1a031200;
+    width: 400px;
+    height: 100px;
+    position: fixed;
+    top: 100px;
+    right:-400px;
+    transition: 850ms;
+    z-index: 51;
+  }
+  
+  .side-menu.active {
+    right: 0px;
+    transition: 350ms;
+  }
+  
+
+ 

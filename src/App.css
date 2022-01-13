@@ -6,6 +6,24 @@ body{
   background-color: rgb(20, 20, 20)
 }
 
+#noticeEvent1{
+  background-color: rgba(168, 143, 0, 0.24);
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+#noticeEvent2{
+  background-color: rgba(0, 4, 58, 0.63);
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
 .alert-class{
   position:absolute;
   top: 100px;

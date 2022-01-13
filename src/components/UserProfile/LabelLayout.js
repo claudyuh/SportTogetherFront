@@ -34,7 +34,6 @@ const LabelLayout = (props) => {
 
     useEffect(() => {
         setSports(props.sports)
-            console.log('AAAAA',sports)
     }, [props.sports, sports])
 
     const handleBadge = () => {

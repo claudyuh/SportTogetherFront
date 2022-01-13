@@ -26,6 +26,7 @@ const UploadIcon = (props) => {
 
   const handleModalClose = () => {
     setSelectedFile(null)
+    setResponseOk(false)
     dispatch(dialogActions.modalToggle())
   }
 
@@ -86,11 +87,13 @@ const UploadIcon = (props) => {
       </form>}
       {responseOk && <form className='formStyleButtons1'>
         {isLoading && <div>Please don't close this window while we processing your request</div>}
-        <img src={preview} alt="preview"/>
+        <img src={preview} alt="preview" className="mb-3"/>
         {isLoading && <Spinner animation="border" variant="primary"/>}
-        <Button onClick={handleUpload}  disabled={isLoading}>Upload</Button>
-        <Button onClick={handleModalClose}  disabled={isLoading}>Close</Button>
-        <Button onClick={handleBack}  disabled={isLoading} style={{float:'left', marginLeft:'25px'}}>Back</Button>
+        
+          <Button onClick={handleBack}  disabled={isLoading} style={{float:'left', marginLeft:'25px'}}>Back</Button>
+          <Button onClick={handleUpload}  disabled={isLoading}>Upload</Button>
+          <Button onClick={handleModalClose}  disabled={isLoading}>Close</Button>
+       
       </form>}
     </ModalReg>
   );

@@ -13,7 +13,7 @@ const AlertDismissible = (props) => {
   return (
     <Alert variant={alertVariant}>
       <FontAwesomeIcon style={{float:'right'}} icon={faTimes} size="2x"/>
-      <Alert.Heading style={{fontSize:'16px', paddingTop:'6px'}} className="center">{alertTitle} </Alert.Heading>
+    <Alert.Heading style={{fontSize:'16px', paddingTop:'6px'}} className="center">{alertTitle}</Alert.Heading>
     </Alert>
   );
 }

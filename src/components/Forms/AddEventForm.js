@@ -10,6 +10,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { alertActions } from "../../store/alert";
 import { dialogActions } from "../../store/modal";
 import customStyles from "../../utils/ReactSelect/RSCustomStyle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth() + 1; //January is 0 so need to add 1 to make it 1!
@@ -24,6 +26,7 @@ const AddEventForm = props => {
   const [validated, setValidated] = useState(false);
   const [isError, setIsError] = useState(false);
   const [sportOptions, setSportOptions] = useState([]);
+  const [sportOptionsAlert, setSportOptionsAlert] = useState()
   const [inputSport, setInputSport] = useState("");
   const [inputNrPlayers, setInputNrPlayers] = useState("");
   const [inputLevel, setInputLevel] = useState("");
@@ -41,14 +44,19 @@ const AddEventForm = props => {
   const [cityValidation, setCityValidation] = useState("");
   const [levelValidation, setLevelValidation] = useState("");
 
-  const token = useSelector((state) => state.authentication.token)
-  const dispatch = useDispatch()
-
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
   function reverseDate(string) {
     return (string = string.split("-").reverse().join("-"));
+  }
+
+  const token = useSelector((state) => state.authentication.token)
+
+  const dispatch = useDispatch()
+
+  const handleCloseAlert = () => {
+    setSportOptionsAlert('')
   }
 
   useEffect(() => {
@@ -65,10 +73,14 @@ const AddEventForm = props => {
       const sportOptions = []
       responseData.map(i => sportOptions.push({value:i.split(" ")[0], label: i.split(" ")[0]}))
       console.log(sportOptions)
+      if(sportOptions.length <= 9){
+        setSportOptionsAlert('Your sport options for creating an event are limited to your assigned badges, if you wish to start an event with a different sport you can add/disable badges on your profile.')
+      }
       setSportOptions(sportOptions)
     }
     fetchUserData()
   },[token])
+
 
   useEffect(() => {
     let lstCounties = [];
@@ -195,11 +207,14 @@ const AddEventForm = props => {
 
   return (
     <div className="addEventFormClass">
-      <p className="mb-5" id="noticeEvent">
+      <p className="mb-5" id="noticeEvent1">
         Keep in mind, once you create an event, you will not be able to
         edit/delete it if other users joined the event unless you make a request
         to all users and they agree with your request!
       </p>
+      
+       {sportOptionsAlert && 
+       <p className="w-50" id="noticeEvent2" onClick = {handleCloseAlert}> {sportOptionsAlert} <FontAwesomeIcon icon={faTimes} size="lg"/> </p>}
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         {isLoading && (
           <Row className="mb-3 justify-content-center">
@@ -240,7 +255,7 @@ const AddEventForm = props => {
               required
             />
             <Form.Control.Feedback type="invalid">
-              Please provide then number of players you wish to play(including
+              Please provide the number of players you wish to play(including
               you)*.
             </Form.Control.Feedback>
           </Col>

@@ -26,7 +26,8 @@ function ModalReg(props) {
       <Modal.Header closeButton>
         <Modal.Title>{props.title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body> {props.children} </Modal.Body>      
+      <Modal.Body> {props.children} </Modal.Body>
+      <Modal.Footer> {props.footer} </Modal.Footer>      
     </Modal>
   );
 }

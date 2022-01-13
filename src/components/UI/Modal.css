@@ -2,7 +2,7 @@
 .modal-content{
 
     /* 80% of window height */
-    height: 90%; 
+    height: 95%; 
     border: transparent;
     background-color: rgba(255, 255, 255, 0);
     
@@ -18,7 +18,7 @@
 
  .modal-body{
   width:100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.486);
   color: white;
 }

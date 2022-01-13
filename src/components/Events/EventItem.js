@@ -1,6 +1,6 @@
 import "./EventItem.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMapMarkerAlt, faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Dropdown, Button } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,26 +11,23 @@ import ModalAlert from "../UI/ModalAlert";
 const EventItem = (props) => {
   const [currentUserId, setCurrentUserId] = useState('')
   const dispatch = useDispatch();
-
   const token = useSelector(state => state.authentication.token)
-
+  
   useEffect(() => {
     const localStoreageData = JSON.parse(localStorage.getItem('userData'))
     const currentUser = localStoreageData.userId
     setCurrentUserId(currentUser)
   }, [])
   const editHandler = () => {
-
   }
 
   const toggleModal = () => {
     dispatch(dialogActions.modalAlertToggle())
     dispatch(dialogActions.modalAlertTitle('Delete?'))
   }
-
+  
   const confirmDeleteHandler = async () => {
     try {
-      
       const response = await fetch('http://localhost:5000/events/myevents', {
         method: 'DELETE',
         headers: {
@@ -57,6 +54,33 @@ const EventItem = (props) => {
     } 
   }
 
+  const handleJoinRequest = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/events/join', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer '+token,
+        },
+        body: JSON.stringify({'joinRequestToUserId':props.userId, 'eventId': props.eventId})
+      })
+      const responseData = await response.json()
+      if(response.ok){
+        console.log('response.OK joinEvent >>>',responseData)
+        window.location.reload(false);
+        dispatch(alertActions.alertToggle())
+        dispatch(alertActions.alertVariant('success'))
+        dispatch(alertActions.alertTitle('Join request successfully sent'))
+      }else{
+        dispatch(alertActions.alertToggle())
+        dispatch(alertActions.alertVariant('warning'))
+        dispatch(alertActions.alertTitle(responseData))
+      }
+    } catch (error) {
+      console.error(error)
+    } 
+  }
+
   return (
     <React.Fragment>
     <ModalAlert size="xs" customStyle={{height:'220px', marginTop:'250px'}}> 
@@ -72,7 +96,17 @@ const EventItem = (props) => {
           <h2>{props.authorFirstName}</h2>
           <h4>@{props.authorUsername}</h4>
         </div>
+        {
+          props.userId !== currentUserId 
+          && props.currentUserDetails[0].sportInterests[props.sport] !== 'N/A'
+          && (props.currentUserDetails[0].sportInterests[props.sport] === props.level || props.allowed === false)
+          && (props.joinedIds.length+1 < props.nrPlayers)
+          && (!props.joinedIds.includes(currentUserId))
+          && !props.currentUserDetails[0].sentJoinRequestsEventsIds.includes(props.eventId)
+          && <Button variant="dark" className="justify-content-end w-75 mt-3" onClick={handleJoinRequest}> Join Event</Button>
+        }
       </div>
+
       <div className="infos">
         <span className="userTextSport">{props.sport}</span><span id="tagLevel">#{props.level}</span>
         {/* HERE CHECKS TO SHOW DROPDOWN TO THE OWNER */}
@@ -87,7 +121,7 @@ const EventItem = (props) => {
           </Dropdown.Menu>
         </Dropdown>}
         
-        <div className="userTextCity">{props.county === props.city ? props.county : props.county + ', ' + props.city} </div>{props.location.length >= 2 ? <span> Place: {props.location}</span> : null}
+        <div className="userTextCity"><FontAwesomeIcon icon={faMapMarkerAlt} /> {props.county === props.city ? props.county : props.county + ', ' + props.city} </div>{props.location.length >= 2 ? <span> Place: {props.location}</span> : null}
         <div className="userTextDescription">{props.description}</div>
         <ul className="eventStats">
           <li>
@@ -100,11 +134,11 @@ const EventItem = (props) => {
           </li>
           <li>
             <h3 >Joined</h3>
-            <h4>1/{props.nrPlayers}</h4>
+            <h4>{props.joinedIds.length + 1}/{props.nrPlayers}</h4>
           </li>
           <li>
             <h3 style={{'width': '100px'}}>Who can join:</h3>
-            <h4>{props.allowed === false ? 'Everyone' : `${props.level}`}</h4>
+            <h4>{props.allowed === false ? 'Anyone' : `${props.level}`}</h4>
           </li>
         </ul>
       </div>

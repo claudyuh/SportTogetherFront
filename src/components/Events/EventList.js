@@ -4,12 +4,14 @@ import EventItem from "./EventItem";
 const EventList = (props) => {
     
     let arrayEvents = [...props.eventsList]
-
+    let userDetails = [props.userDetails]
+// userDetails to tweak a bit, they are sent through map many times, performance!
     return (
         
         <React.Fragment>
             {arrayEvents.map((item) => (
-                <EventItem  
+                <EventItem
+                    currentUserDetails= {userDetails}
                     key = {item._id}
                     eventId = {item._id}
                     userId = {item.author._id}
@@ -25,6 +27,7 @@ const EventList = (props) => {
                     date = {item.startDate}
                     time = {item.startTime}
                     nrPlayers = {item.nrOfPlayers}
+                    joinedIds = {item.playerIds}
                     allowed = {item.levelRequirement}
                 /> 
             ))}

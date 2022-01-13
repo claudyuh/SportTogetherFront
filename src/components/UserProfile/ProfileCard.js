@@ -39,7 +39,7 @@ const ProfileCard = (props) => {
 
           {showModalType === 1 && <ModalReg size="lg" fullscreen="false">
             <img src={props.userProfileImg} alt="profile pic" 
-              style={{width: "700px",
+              style={{width: "300px",
               objectFit: 'cover',
               marginLeft: '35px',
               marginTop:'50px'

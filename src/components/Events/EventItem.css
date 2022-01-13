@@ -30,10 +30,11 @@
   font-size: 15px;
 }
 
-.profileImg img {
+.cardEvent .profileImg img {
   max-width: 100%;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
+  box-shadow: 0 0 0 4px rgb(23, 30, 65);
   object-fit: cover;
   display: block;
   cursor: pointer;
@@ -79,22 +80,29 @@ ul {
   border-radius: 10px;
   top: -0.2rem;
   left: -0.2rem;
-
 }
-.cardEvent::after {
+
+.cardEvent:hover::after {
   height: 12rem;
   width: 12rem;
-  background-color: #3856ff;
+  background-color: #b4b4b4;
+  top: -3rem;
+  right: -3rem;
+  box-shadow: 2rem 6rem 0 -3rem #fff;
+}
+
+.cardEvent:hover::after {
+  height: 35rem;
+  /* here dimensions of the little dot in the corner */
+  width: 35rem;
+  transition: 450ms;
+  background-color: rgb(25, 32, 65);
   top: -9rem;
   right: -9rem;
   box-shadow: 2rem 6rem 0 -3rem #fff;
 }
 
-.cardEvent img {
-  width: 5rem;
-  min-width: 80px;
-  box-shadow: 0 0 0 4px rgb(23, 30, 65);;
-}
+
 
 
 .userName {

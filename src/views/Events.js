@@ -6,12 +6,13 @@ import "./Events.css";
 import UserProfileCard from "../components/UserProfile/UserProfileCard";
 import FilterEvents from "../components/Events/FilterEvents";
 import EventList from "../components/Events/EventList";
-
+import SideComponentToggler from "../components/Layout/SideComponentToggler";
+import AnimatedCloudySun from '../components/UI/AnimatedCloudySun'
+import Weather from '../api/Weather'
 const Events = () => {
   const [allEvents, setAllEvents] = useState('')
   const [userDetails, setUserDetails] = useState('')
   const token = useSelector((state) => state.authentication.token)
-  
 
   useEffect(() => {
     const fetchAllEvents = async() => {
@@ -23,7 +24,7 @@ const Events = () => {
         }
       })
       const responseData = await response.json()
-      console.log('responseData: ',responseData)
+      console.log('responseData Events: ',responseData)
       setAllEvents(responseData)
     }   
     fetchAllEvents()
@@ -39,21 +40,23 @@ const Events = () => {
         }
       })
       const responseData = await response.json()
-      console.log('responseData: ',responseData)
-      const userData = {profileImg: responseData.profileImg, username: responseData.username}
-      setUserDetails(userData)
+      console.log('responseData profile details: ',responseData)
+      setUserDetails(responseData)
     }
     fetchUserData()
   }, [token])
 
   return (
-    <div className="body">
-      <Container className="justify-content-center">
+    <div className="body">     
+            <SideComponentToggler togglerButton={<AnimatedCloudySun/>} sidebarBody={<Weather/>}> 
+              <Weather/>
+            </SideComponentToggler>
+      <Container>
         <Row id="search" >
-            <UserProfileCard userData = {userDetails}/>
+            <UserProfileCard eventsList = {allEvents} userDetails = {userDetails}/>
           <Col md={7}>
             <SearchForm />
-            <EventList eventsList = {allEvents}/>
+            <EventList eventsList = {allEvents} userDetails = {userDetails}/>
           </Col>
           <Col xl={2}>
             <FilterEvents/>

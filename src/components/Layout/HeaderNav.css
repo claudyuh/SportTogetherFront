@@ -103,6 +103,9 @@
     font-size: 30px;
   }
 
+  .navbar-light .navbar-toggler-icon{
+    background-color: rgb(20, 20, 20);
+  }
 
   @media (max-width:990px) {
     .badge1{

@@ -72,7 +72,7 @@ const LoginForm = (props) => {
       <div className="box">
         <div className="loginForm">
         <h3>Login</h3>
-        {isError && <p className="mb-5" id="noticeEvent"> {isError}</p>}
+        {isError && <p className="mb-5" id="noticeEvent1"> {isError}</p>}
         <Form action="/login" onSubmit={loginFormHandler}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
